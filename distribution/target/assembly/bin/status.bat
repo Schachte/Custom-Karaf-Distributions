@@ -87,7 +87,7 @@ if "%KARAF_ETC%" == "" (
 )
 
 :EXECUTE
-    "%KARAF_HOME%\bin\karaf.bat" status
+    "%KARAF_HOME%\bin\dekantar.bat" status
 
 rem # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 

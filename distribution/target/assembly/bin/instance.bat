@@ -127,7 +127,7 @@ if "%KARAF_DEBUG%" == "" goto :KARAF_DEBUG_END
 
 rem Setup the classpath
 pushd "%KARAF_HOME%\lib"
-for %%G in (karaf*.jar) do call:APPEND_TO_CLASSPATH %%G
+for %%G in (*.jar) do call:APPEND_TO_CLASSPATH %%G
 popd
 goto CLASSPATH_END
 
@@ -139,7 +139,10 @@ goto :EOF
 
 :CLASSPATH_END
 
-set CLASSPATH=%KARAF_HOME%\system\org\apache\karaf\instance\org.apache.karaf.instance.command\3.0.4\org.apache.karaf.instance.command-3.0.4.jar;%KARAF_HOME%\system\org\apache\karaf\instance\org.apache.karaf.instance.core\3.0.4\org.apache.karaf.instance.core-3.0.4.jar;%KARAF_HOME%\system\org\apache\karaf\shell\org.apache.karaf.shell.console\3.0.4\org.apache.karaf.shell.console-3.0.4.jar;%KARAF_HOME%\system\org\apache\karaf\shell\org.apache.karaf.shell.table\3.0.4\org.apache.karaf.shell.table-3.0.4.jar;%KARAF_HOME%\system\org\apache\aries\blueprint\org.apache.aries.blueprint.api\1.0.1\org.apache.aries.blueprint.api-1.0.1.jar;%KARAF_HOME%\system\org\apache\aries\blueprint\org.apache.aries.blueprint.core\1.4.3\org.apache.aries.blueprint.core-1.4.3.jar;%KARAF_HOME%\system\org\apache\aries\blueprint\org.apache.aries.blueprint.cm\1.0.6\org.apache.aries.blueprint.cm-1.0.6.jar;%KARAF_HOME%\system\org\ops4j\pax\logging\pax-logging-api\1.8.3\pax-logging-api-1.8.3.jar;%KARAF_HOME%\system\org\apache\felix\org.apache.felix.framework\4.2.1\org.apache.felix.framework-4.2.1.jar;%KARAF_HOME%\system\jline\jline\2.12.1\jline-2.12.1.jar;%CLASSPATH%
+set CLASSPATH=%KARAF_HOME%\system\org\apache\karaf\instance\org.apache.karaf.instance.core\4.0.0\org.apache.karaf.instance.core-4.0.0.jar
+set CLASSPATH=%CLASSPATH%;%KARAF_HOME%\system\org\apache\karaf\shell\org.apache.karaf.shell.core\4.0.0\org.apache.karaf.shell.core-4.0.0.jar
+set CLASSPATH=%CLASSPATH%;%KARAF_HOME%\system\org\ops4j\pax\logging\pax-logging-api\1.8.3\pax-logging-api-1.8.3.jar
+set CLASSPATH=%CLASSPATH%;%KARAF_HOME%\system\jline\jline\2.12.1\jline-2.12.1.jar
 
 :EXECUTE
     if "%SHIFT%" == "true" SET ARGS=%2 %3 %4 %5 %6 %7 %8

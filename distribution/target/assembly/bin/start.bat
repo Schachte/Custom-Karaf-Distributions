@@ -84,7 +84,7 @@ if "%KARAF_TITLE%" == "" (
 )
 
 :EXECUTE
-    start "%KARAF_TITLE%" /MIN "%KARAF_HOME%\bin\karaf.bat" server %*
+    start "%KARAF_TITLE%" /MIN "%KARAF_HOME%\bin\dekantar.bat" server %*
 
 rem # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 

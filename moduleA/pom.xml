@@ -32,12 +32,6 @@
                     <instructions>
                         <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
                         <Bundle-Version>${project.version}</Bundle-Version>
-                        <Export-Package>
-                            com.schachte.moduleA
-                        </Export-Package>
-                        <Import-Package>
-                            *
-                        </Import-Package>
                     </instructions>
                 </configuration>
             </plugin>

@@ -276,7 +276,7 @@ setupDefaults() {
     fi
 
     # Setup classpath
-    CLASSPATH="$KARAF_HOME/system/org/apache/karaf/shell/org.apache.karaf.shell.console/3.0.4/org.apache.karaf.shell.console-3.0.4.jar"
+    CLASSPATH="$KARAF_HOME/system/org/apache/karaf/shell/org.apache.karaf.shell.core/4.0.0/org.apache.karaf.shell.core-4.0.0.jar"
     CLASSPATH="$CLASSPATH:$KARAF_HOME/system/org/ops4j/pax/logging/pax-logging-api/1.8.3/pax-logging-api-1.8.3.jar"
     CLASSPATH="$CLASSPATH:$KARAF_HOME/system/jline/jline/2.12.1/jline-2.12.1.jar"
 
@@ -339,7 +339,7 @@ run() {
         CLASSPATH=`cygpath --path --windows "$CLASSPATH"`
     fi
 
-    exec "$JAVA" $JAVA_OPTS -Dkaraf.instances="${KARAF_HOME}/instances" -Dkaraf.home="$KARAF_HOME" -Dkaraf.base="$KARAF_BASE" -Dkaraf.etc="$KARAF_ETC" -Djava.io.tmpdir="$KARAF_DATA/tmp" -Djava.util.logging.config.file="$KARAF_BASE/etc/java.util.logging.properties" $KARAF_OPTS $OPTS -classpath "$CLASSPATH" org.apache.karaf.shell.console.impl.Main --classpath="$KARAF_HOME/system" "$@"
+    exec "$JAVA" $JAVA_OPTS -Dkaraf.instances="${KARAF_HOME}/instances" -Dkaraf.home="$KARAF_HOME" -Dkaraf.base="$KARAF_BASE" -Dkaraf.etc="$KARAF_ETC" -Djava.io.tmpdir="$KARAF_DATA/tmp" -Djava.util.logging.config.file="$KARAF_BASE/etc/java.util.logging.properties" $KARAF_OPTS $OPTS -classpath "$CLASSPATH" org.apache.karaf.shell.impl.console.standalone.Main --classpath="$KARAF_HOME/system" "$@"
 }
 
 main() {

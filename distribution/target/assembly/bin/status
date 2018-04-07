@@ -137,7 +137,7 @@ run() {
     if [ ! -d "$KARAF_DATA/log" ]; then
         mkdir -p "$KARAF_DATA/log"
     fi
-    exec "$KARAF_HOME"/bin/karaf status "$@"
+    exec "$KARAF_HOME"/bin/dekantar status "$@"
 }
 
 main() {
