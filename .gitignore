@@ -55,3 +55,9 @@ fabric.properties
 
 # Editor-based Rest Client
 .idea/httpRequests
+
+moduleA/target/classes/META-INF/MANIFEST\.MF
+
+*.jar
+
+moduleA/target/
